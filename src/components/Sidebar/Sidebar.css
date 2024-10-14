@@ -64,3 +64,9 @@
     padding-right: 10px;
     cursor: pointer;
 }
+
+.result-data p{
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.8;
+}

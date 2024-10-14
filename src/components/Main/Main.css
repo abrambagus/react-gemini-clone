@@ -20,19 +20,22 @@
 }
 
 .main-container{
-    display: flex;
-    height: 60%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
+    max-width: 900px;
+    margin: auto;
+    height: 90%;
+    display: grid;
 }
 
 .main .greet{
-    margin: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
     font-size: 28px;
     color: #c4c7c5;
     font-weight: 500;
     padding: 20px;
+
 }
 
 .main .greet .hello{
@@ -45,8 +48,7 @@
     -webkit-text-fill-color: transparent
 }
 
-.main-bottom{
-    height: 43%;
+.main-bottom{   
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -91,4 +93,58 @@
     margin: 15px auto;
     text-align: center;
     font-weight: 300;
+}
+
+.result{
+    padding: 0px 5%;
+    max-height: 700px;
+    overflow-y: scroll;  
+}
+
+.result::-webkit-scrollbar{
+    display: none;
+}
+
+.result-title{
+    margin: 40px 0px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.result img{
+    width: 40px;
+    border-radius: 50%;
+}
+
+.result-data{
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+
+.loader{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.loader hr{
+    border-radius: 4px;
+    border: none;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right, #9ed7ff, #ffffff, #9ed7ff);
+    background-size: 800px 50px;
+    height: 20px;
+    animation: loader 3s infinite linear;
+}
+
+@keyframes loader{
+    0%{
+        background-position: -800px 0px;
+    }
+    100%{
+        background-position: 800px 0px;
+    }
 }
