@@ -33,6 +33,7 @@
 .sidebar .recent{
     display: flex;
     flex-direction: column;
+    animation: fadeIn 1.5s;
 }
 
 .sidebar .recent-title{
@@ -65,8 +66,8 @@
     cursor: pointer;
 }
 
-.result-data p{
-    font-size: 17px;
-    font-weight: 300;
-    line-height: 1.8;
+@media (max-width:600px) {
+    .sidebar{
+        display: none;
+    }
 }
