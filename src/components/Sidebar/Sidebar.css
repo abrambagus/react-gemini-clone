@@ -5,6 +5,12 @@
     justify-content: space-between;
     background-color: #f0f4f9;
     padding: 25px 15px;
+    width: 72px;
+    transition: width 0.3s ease;
+}
+
+.sidebar.open{
+    width: 320px;
 }
 
 .sidebar img{
@@ -22,7 +28,7 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    padding: 10px 15px;
+    padding: 7px 11px;
     background-color: #e6eaf1;
     border-radius: 50px;
     font-size: 14px;
@@ -30,10 +36,14 @@
     cursor: pointer;
 }
 
+.sidebar .new-chat .new-chat-text{
+    animation: fadeIn 1s;
+}
+
 .sidebar .recent{
     display: flex;
     flex-direction: column;
-    animation: fadeIn 1.5s;
+    animation: fadeIn 1s;
 }
 
 .sidebar .recent-title{

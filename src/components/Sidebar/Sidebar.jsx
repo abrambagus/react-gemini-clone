@@ -13,12 +13,12 @@ const Sidebar = () => {
     }
 
     return (
-        <div className="sidebar">
+        <div className={`sidebar ${isExtended && "open"}`}>
             <div className="top">
                 <img onClick={() => setIsExtended(prev => !prev)} className='menu' src={assets.menu_icon} alt="" />
                 <div onClick={() => newChat()} className="new-chat">
                     <img src={assets.plus_icon} alt="" />
-                    {isExtended ? <p>New Chat</p> : null}
+                    {isExtended ? <p className={`new-chat-text ${isExtended ? "open" : "close"}`}>New Chat</p> : null}
                 </div>
                 {isExtended ? (
                     <div className="recent">
